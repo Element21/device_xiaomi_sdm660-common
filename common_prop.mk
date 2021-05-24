@@ -242,7 +242,6 @@ PRODUCT_ODM_PROPERTIES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
-    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.vendor.data.mode=concurrent \
     persist.vendor.qti.telephony.vt_cam_interface=1 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
