@@ -560,7 +560,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/qcom-caf/sdm660/media \
+    hardware/qcom-caf/sdm660/display \
+    hardware/qcom-caf/sdm660/audio
 
 # Shims
 PRODUCT_PACKAGES += \
