@@ -1,16 +1,17 @@
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.ab-ota=speed-profile \
     dalvik.vm.dex2oat64.enabled=true \
     ro.vendor.qti.am.reschedule_service=true \
     ro.sys.fw.dex2oat_thread_count=8 \
     dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
     dalvik.vm.boot-dex2oat-threads=8 \
     dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-    dalvik.vm.dex2oat-filter=quicken \
-    dalvik.vm.dex2oat-threads=4 \
-    dalvik.vm.image-dex2oat-cpu-set=4,5,6,7 \
-    dalvik.vm.image-dex2oat-filter=quicken \
-    dalvik.vm.image-dex2oat-threads=4
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.dex2oat-threads=8 \
+    dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+    dalvik.vm.image-dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-threads=8
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -89,7 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.hfp.enable=false \
     vendor.audio.feature.hifi_audio.enable=true \
     vendor.audio.feature.hwdep_cal.enable=false \
-    vendor.audio.feature.incall_music.enable=false \
+    vendor.audio.feature.incall_music.enable=true \
     vendor.audio.feature.multi_voice_session.enable=true \
     vendor.audio.feature.keep_alive.enable=false \
     vendor.audio.feature.kpi_optimize.enable=false \
@@ -290,7 +291,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_display_power_timer_ms=10000 \
     ro.surface_flinger.set_touch_timer_ms=5000 \
     ro.surface_flinger.set_idle_timer_ms=9000 \
-    ro.surface_flinger.wcg_composition_dataspace=143261696
+    ro.surface_flinger.wcg_composition_dataspace=143261696 \
+    debug.performance.tuning=1
 
 # System restart
 PRODUCT_PROPERTY_OVERRIDES += \
